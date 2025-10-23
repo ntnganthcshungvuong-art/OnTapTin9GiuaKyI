@@ -1,1 +1,240 @@
+{
+  "mcqs": [
+    {
+      "stem": "Ứng dụng thể hiện rõ vai trò của máy tính trong giải trí là",
+      "img": null,
+      "options": ["chơi trò chơi điện tử, nghe nhạc, xem phim.", "quản lý hồ sơ nhân viên.", "phân tích dữ liệu kinh tế.", "lập trình robot."],
+      "answer": 0,
+      "hint": "Giải trí: game, nghe nhạc, xem phim."
+    },
+    {
+      "stem": "Máy tính có thể thực hiện công việc nào dưới đây?",
+      "img": null,
+      "options": ["Chỉ tính toán đơn giản.", "Xử lí thông tin nhanh và chính xác.", "Chỉ dùng để chơi game.", "Chỉ lưu trữ văn bản."],
+      "answer": 1,
+      "hint": "Khả năng chính: xử lí thông tin nhanh & chính xác."
+    },
+    {
+      "stem": "Một trong những ứng dụng của máy tính trong lĩnh vực khoa học là",
+      "img": null,
+      "options": ["giúp nấu ăn.", "mô phỏng thí nghiệm.", "chơi game.", "quản lý thời gian."],
+      "answer": 1,
+      "hint": "Khoa học: mô phỏng, tính toán, xử lí dữ liệu."
+    },
+    {
+      "stem": "Trong lĩnh vực giáo dục, máy tính được sử dụng để",
+      "img": null,
+      "options": ["tính toán thuế.", "chẩn đoán bệnh.", "điều khiển xe tự động.", "soạn bài giảng điện tử và học trực tuyến."],
+      "answer": 3,
+      "hint": "Dạy & học số: e-learning, bài giảng điện tử."
+    },
+    {
+      "stem": "Trong khoa học kỹ thuật, máy tính có thể giúp con người",
+      "img": null,
+      "options": ["dự đoán thời tiết và mô phỏng thí nghiệm.", "đóng gói hàng hóa.", "giao hàng tận nơi.", "chơi game và nghe nhạc."],
+      "answer": 0,
+      "hint": "Dự báo, mô phỏng là điển hình của KHKT."
+    },
+    {
+      "stem": "Máy tính KHÔNG có khả năng",
+      "img": null,
+      "options": ["kết nối toàn cầu với tốc độ cao.", "lưu trữ dữ liệu với dung lượng lớn.", "cảm thụ văn học.", "tính toán nhanh."],
+      "answer": 2,
+      "hint": "‘Cảm thụ’ là năng lực cảm xúc – sáng tạo của con người."
+    },
+    {
+      "stem": "Trong thương mại, máy tính được dùng để",
+      "img": null,
+      "options": ["quản lý bán hàng và thanh toán điện tử.", "nấu ăn cho khách hàng.", "thiết kế thời trang.", "trang trí cửa hàng."],
+      "answer": 0,
+      "hint": "Thương mại điện tử: quản lí bán hàng, thanh toán."
+    },
+    {
+      "stem": "Trong nông nghiệp, máy tính được ứng dụng để",
+      "img": null,
+      "options": ["phun thuốc bằng bình thủ công.", "bắt sâu bằng tay.", "theo dõi thời tiết, tự động tưới tiêu.", "gặt lúa bằng liềm."],
+      "answer": 2,
+      "hint": "Nông nghiệp thông minh: cảm biến, tự động tưới."
+    },
+    {
+      "stem": "Cụm từ miêu tả đúng khả năng tính toán của máy tính là",
+      "img": null,
+      "options": ["nhanh, bền bỉ, chính xác.", "dung lượng lớn.", "tốc độ cao.", "hấp dẫn."],
+      "answer": 0,
+      "hint": "Ba đặc tính: nhanh – bền bỉ – chính xác."
+    },
+    {
+      "stem": "Tác động tiêu cực của CNTT trong giáo dục là",
+      "img": null,
+      "options": ["giúp học sinh dễ tìm tài liệu.", "hỗ trợ soạn bài hiệu quả.", "gây nghiện game, sao nhãng học tập.", "học tập trực tuyến linh hoạt."],
+      "answer": 2,
+      "hint": "Tác động tiêu cực: nghiện game, xao nhãng."
+    },
+    {
+      "stem": "Trong đô thị, thiết bị nào gắn bộ xử lí thông tin để điều khiển lưu thông?",
+      "img": null,
+      "options": ["Xe ô tô tự lái.", "Đèn giao thông.", "Camera an ninh.", "Biển báo giao thông."],
+      "answer": 1,
+      "hint": "Đèn giao thông điều khiển chu kỳ đèn."
+    },
+    {
+      "stem": "Những đặc điểm nào là ưu điểm, thể hiện khả năng của máy tính?",
+      "img": null,
+      "options": ["Tính toán nhanh, lưu trữ lâu dài, kết nối toàn cầu.", "Tính toán nhanh, lưu trữ lớn, kết nối toàn cầu.", "Tưởng tượng phong phú, lưu trữ lớn, kết nối toàn cầu.", "Tưởng tượng phong phú, lưu trữ lớn, kết nối an toàn."],
+      "answer": 1,
+      "hint": "Nhanh + lưu trữ lớn + kết nối toàn cầu."
+    },
+    {
+      "stem": "Cần quan tâm đến chất lượng thông tin khi tìm kiếm trên Internet vì",
+      "img": null,
+      "options": ["trên Internet có rất nhiều thông tin sai lệch, không chính xác.", "tất cả thông tin trên mạng đều đúng.", "thông tin mạng chỉ dành cho người lớn.", "Internet không có nguồn tin chính thống."],
+      "answer": 0,
+      "hint": "Phải kiểm chứng vì có nhiều thông tin sai."
+    },
+    {
+      "stem": "Khi đọc tin trên mạng xã hội để đảm bảo tiếp nhận thông tin đúng, học sinh nên",
+      "img": null,
+      "options": ["kiểm tra nguồn tin và đối chiếu với các trang chính thống.", "tin ngay và chia sẻ lại.", "bình luận theo cảm xúc.", "đưa ra ý kiến mà không cần kiểm chứng."],
+      "answer": 0,
+      "hint": "Thông tin phải kiểm chứng nguồn."
+    },
+    {
+      "stem": "Hành vi thể hiện biết quan tâm đến chất lượng thông tin là",
+      "img": null,
+      "options": ["sao chép bài viết mà không kiểm tra.", "chia sẻ thông tin chưa đọc kỹ.", "tin vào những gì bạn bè nói.", "tìm hiểu, so sánh thông tin từ nhiều nguồn khác nhau."],
+      "answer": 3,
+      "hint": "So sánh – đối chiếu nhiều nguồn."
+    },
+    {
+      "stem": "Luật Công nghệ thông tin số 67 được Quốc hội ban hành năm",
+      "img": null,
+      "options": ["2004", "2006", "2008", "2010"],
+      "answer": 1,
+      "hint": "Luật CNTT: năm 2006."
+    },
+    {
+      "stem": "Luật An ninh mạng được Quốc hội ban hành năm",
+      "img": null,
+      "options": ["2012", "2014", "2016", "2018"],
+      "answer": 3,
+      "hint": "Luật An ninh mạng: 2018."
+    },
+    {
+      "stem": "Luật Công nghệ thông tin quy định về quyền và trách nhiệm của tổ chức, cá nhân tham gia",
+      "img": null,
+      "options": ["việc sản xuất và sử dụng máy tính.", "ứng dụng, phát triển CNTT cũng như các hành vi bị nghiêm cấm.", "mua bán phần mềm.", "lập trình máy tính."],
+      "answer": 1,
+      "hint": "Phạm vi: ứng dụng, phát triển, quyền – nghĩa vụ – cấm."
+    },
+    {
+      "stem": "Hành vi phát tán virus máy tính được xem là",
+      "img": null,
+      "options": ["hành vi hợp pháp.", "vi phạm pháp luật.", "hành vi khuyến khích.", "không bị xử lý."],
+      "answer": 1,
+      "hint": "Phát tán mã độc là hành vi bị cấm."
+    },
+    {
+      "stem": "Tự ý đăng biển số xe của người khác là hành vi vi phạm",
+      "img": null,
+      "options": ["pháp luật về sở hữu trí tuệ, tài sản, đánh bạc,...", "quyền nhân thân, uy tín của cá nhân/tổ chức.", "an ninh quốc gia, trật tự xã hội.", "bảo đảm an toàn thông tin trên không gian mạng."],
+      "answer": 1,
+      "hint": "Xâm phạm quyền nhân thân/quyền riêng tư."
+    },
+    {
+      "stem": "Khi sử dụng tài liệu, hình ảnh, phần mềm của người khác, em cần",
+      "img": null,
+      "options": ["xin phép và ghi rõ nguồn.", "tự do sao chép.", "chia sẻ không giới hạn.", "không cần tôn trọng bản quyền."],
+      "answer": 0,
+      "hint": "Tôn trọng bản quyền: xin phép, ghi nguồn."
+    },
+    {
+      "stem": "Khi tham gia mạng xã hội, học sinh cần",
+      "img": null,
+      "options": ["tuân thủ pháp luật, ứng xử văn minh, tôn trọng người khác.", "đăng bài tùy ý.", "chia sẻ tin đồn.", "bình luận thiếu kiểm soát."],
+      "answer": 0,
+      "hint": "Ứng xử số văn minh, tuân thủ luật."
+    },
+    {
+      "stem": "Việc lan truyền hình ảnh riêng tư của người khác khi không được phép có thể dẫn đến",
+      "img": null,
+      "options": ["ảnh hưởng danh dự, có thể bị xử lý pháp luật.", "không sao vì chỉ đăng mạng.", "làm người khác nổi tiếng hơn.", "giúp mọi người hiểu rõ sự việc."],
+      "answer": 0,
+      "hint": "Xâm phạm quyền riêng tư ⇒ hậu quả pháp lý."
+    },
+    {
+      "stem": "Hành vi bình luận ác ý, xúc phạm người khác trên mạng xã hội được coi là",
+      "img": null,
+      "options": ["giao tiếp bình thường.", "hành vi thiếu văn hoá và trái đạo đức.", "trò đùa vô hại.", "một cách thể hiện cá tính."],
+      "answer": 1,
+      "hint": "Đó là hành vi sai – có thể bị xử lý."
+    },
+    {
+      "stem": "Trong các hành vi dưới đây, hành vi thiếu văn hoá trong môi trường số là",
+      "img": null,
+      "options": ["dùng từ ngữ lịch sự khi bình luận.", "tôn trọng ý kiến người khác.", "cãi nhau, nói tục trên mạng.", "trích dẫn nguồn rõ ràng khi chia sẻ."],
+      "answer": 2,
+      "hint": "Nói tục/cãi nhau là thiếu văn hoá."
+    },
+    {
+      "stem": "Hành vi thiếu văn hóa khi giao tiếp trên mạng xã hội là",
+      "img": null,
+      "options": ["sử dụng ngôn từ lịch sự khi trò chuyện.", "chúc mừng sinh nhật bạn trên mạng xã hội.", "sử dụng ngôn từ phản cảm khi giao tiếp.", "tham gia vào các diễn đàn thảo luận văn minh."],
+      "answer": 2,
+      "hint": "Ngôn từ phản cảm = thiếu văn hóa."
+    },
+    {
+      "stem": "Ví dụ cho thấy cần kiểm chứng chất lượng thông tin là",
+      "img": null,
+      "options": ["trước khi dùng tài liệu cho thuyết trình, kiểm tra nguồn có đáng tin cậy không.", "sao chép bất kỳ thông tin nào trên mạng.", "đăng lại thông tin bạn bè chia sẻ.", "chọn bài viết có nhiều lượt thích nhất."],
+      "answer": 0,
+      "hint": "Luôn kiểm tra độ tin cậy nguồn."
+    },
+    {
+      "stem": "Ví dụ về tính mới của thông tin là",
+      "img": null,
+      "options": ["bản tin dự báo thời tiết hôm nay.", "bản tin dự báo thời tiết của tuần trước.", "câu chuyện cổ tích.", "một bài viết năm 2010."],
+      "answer": 0,
+      "hint": "‘Mới’ → thông tin cập nhật hiện tại."
+    },
+    {
+      "stem": "Một bài báo đăng thông tin sai lệch về sự kiện là vi phạm",
+      "img": null,
+      "options": ["tính sử dụng được.", "tính mới.", "tính đầy đủ.", "tính chính xác."],
+      "answer": 3,
+      "hint": "Sai sự thật = không đảm bảo tính chính xác."
+    },
+    {
+      "stem": "Ví dụ thể hiện tính đầy đủ của thông tin là",
+      "img": null,
+      "options": ["hướng dẫn sử dụng sản phẩm chi tiết từ lắp đặt đến bảo trì.", "báo cáo chỉ đưa số liệu không phân tích.", "bài viết rất ngắn về sản phẩm.", "nêu tính năng mà không có hướng dẫn dùng."],
+      "answer": 0,
+      "hint": "Đầy đủ: có đủ bước/khía cạnh cần thiết."
+    },
+    {
+      "stem": "Hương thu thập nhiều dữ liệu về ô nhiễm nhưng chưa chọn lọc theo mục đích báo cáo. Thông tin của Hương chưa đảm bảo",
+      "img": null,
+      "options": ["tính chính xác.", "tính đầy đủ.", "tính sử dụng được.", "tính mới."],
+      "answer": 2,
+      "hint": "Chưa chọn lọc theo mục đích ⇒ khó sử dụng."
+    }
+  ],
+  "practicals": [
+    {
+      "title": "Sau bão lớn, mạng xã hội có nhiều bài viết/hình ảnh về thiệt hại miền Trung.",
+      "steps": [
+        "Tìm kiếm: “Ảnh hưởng của bão tại miền Trung Việt Nam năm 2025”.",
+        "Ghi lại 5 kết quả đầu tiên (nguồn, tiêu đề, ngày đăng).",
+        "Chọn 1 bài để đánh giá theo: tính mới, tính chính xác, tính đầy đủ, tính sử dụng được."
+      ]
+    },
+    {
+      "title": "Sưu tầm thông tin về biến đổi khí hậu để thuyết trình.",
+      "steps": [
+        "Tìm với từ khóa: “Biến đổi khí hậu là gì” hoặc “Tác động của biến đổi khí hậu tại Việt Nam”.",
+        "Ghi 5 kết quả đầu tiên (nguồn, tiêu đề, ngày đăng).",
+        "Chọn 1 bài và đánh giá theo 4 tiêu chí chất lượng thông tin."
+      ]
+    }
+  ]
+}
 
