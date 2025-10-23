@@ -1,1 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ôn tập Giữa kì I - Tin học 9</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --brand:#2563eb;
+      --accent:#10b981;
+      --danger:#ef4444;
+      --hint:#eef2ff;
+      --chip:#e2e8f0;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:980px;margin:24px auto;padding:16px}
+    .title{font-weight:800;font-size:28px;text-align:center;margin:8px 0}
+    .subtitle{color:var(--muted);text-align:center;margin:0 0 16px}
+    .card{background:var(--card);border-radius:14px;box-shadow:0 6px 24px rgba(2,6,23,.06);padding:16px;margin:14px 0}
+    h2{font-size:18px;margin:0 0 10px}
+    .q{padding:14px;border:1px solid #e5e7eb;border-radius:12px;margin:14px 0}
+    .stem{font-weight:600;margin-bottom:10px;line-height:1.5}
+    .opts{display:grid;gap:10px}
+    .opt{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border:1px solid #e5e7eb;border-radius:10px;background:#fff;cursor:pointer}
+    .opt input{margin-top:3px}
+    .hint{display:none;background:var(--hint);padding:10px;border-radius:10px;margin-top:10px;color:#312e81}
+    .btn{border:0;border-radius:10px;padding:10px 14px;font-weight:600;cursor:pointer}
+    .btn.blue{background:var(--brand);color:#fff}
+    .btn.green{background:var(--accent);color:#063}
+    .btn.gray{background:#e5e7eb}
+    .btn.small{padding:6px 10px;font-size:13px}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+    .score{font-weight:700;color:var(--brand)}
+    .correct{border-color:#bbf7d0;background:#f0fdf4}
+    .wrong{border-color:#fecaca;background:#fff1f2}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--chip);padding:6px 10px;border-radius:999px;font-size:12px;color:#334155}
+    .footer-actions{position:sticky;bottom:0;z-index:10;background:linear-gradient(180deg, rgba(247,249,252,0) 0%, var(--bg) 35%);padding-top:8px;margin-top:18px}
+    textarea{width:100%;min-height:120px;border:1px solid #e5e7eb;border-radius:10px;padding:10px;resize:vertical;font-family:inherit}
+    @media (max-width:600px){
+      .title{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="chips" style="justify-content:center">
+      <span class="chip">SGK Tin học 9 – Kết nối tri thức</span>
+      <span class="chip">Ôn tập giữa kì I</span>
+      <span class="chip">2 chế độ làm lại</span>
+    </div>
+    <h1 class="title">Ôn tập Giữa kì I – Tin học 9</h1>
+    <p class="subtitle">Trắc nghiệm tự chấm điểm + Bài thực hành ghi chép. Nút <b>Làm lại</b> ở cuối trang (giữ nguyên / xáo trộn).</p>
+
+    <!-- PHẦN TRẮC NGHIỆM -->
+    <div id="mcqBox" class="card">
+      <h2>Phần trắc nghiệm</h2>
+      <div class="toolbar">
+        <button class="btn small gray" id="btnShowAllHints">Hiện/ẩn toàn bộ gợi ý</button>
+        <div class="score" id="score"></div>
+      </div>
+      <div id="mcqs"></div>
+    </div>
+
+    <!-- PHẦN THỰC HÀNH -->
+    <div id="pracBox" class="card">
+      <h2>Phần thực hành (ghi chép)</h2>
+      <div id="prac"></div>
+    </div>
+
+    <!-- NÚT CUỐI FORM -->
+    <div class="footer-actions">
+      <div class="card" style="display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+        <div style="font-weight:700">Thao tác nhanh</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn blue" id="btnSubmit">Nộp bài & chấm điểm</button>
+          <button class="btn green" id="btnResetSame">Làm lại (giữ nguyên thứ tự)</button>
+          <button class="btn gray" id="btnResetShuffle">Làm lại (xáo trộn câu & đáp án)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // --- helpers ---
+    const $ = (q, root=document) => root.querySelector(q);
+    const $$ = (q, root=document) => Array.from(root.querySelectorAll(q));
+
+    // Fisher–Yates
+    function shuffle(arr){
+      const a = arr.slice();
+      for(let i=a.length-1;i>0;i--){
+        const j = Math.floor(Math.random()*(i+1));
+        [a[i],a[j]]=[a[j],a[i]];
+      }
+      return a;
+    }
+
+    // state
+    let DATA = null;
+    let SHUFFLED = false;
+
+    async function load(){
+      const res = await fetch('tin9.json?_=' + Date.now());
+      DATA = await res.json();
+      render();
+    }
+
+    function render(){
+      const box = $('#mcqs'); box.innerHTML='';
+      const qs = SHUFFLED ? shuffle(DATA.mcqs) : DATA.mcqs.slice();
+
+      qs.forEach((q,qi)=>{
+        const card = document.createElement('div'); card.className='q';
+        const stem = document.createElement('div'); stem.className='stem';
+        stem.innerHTML = `Câu ${qi+1}: ${q.stem}${q.img?`<div><img src="${q.img}" alt="minh họa" style="max-width:360px;margin-top:8px;border-radius:10px;border:1px solid #e5e7eb"/></div>`:''}`;
+        const opts = document.createElement('div'); opts.className='opts';
+
+        const optIdx = SHUFFLED ? shuffle(q.options.map((_,i)=>i)) : q.options.map((_,i)=>i);
+        optIdx.forEach((i)=>{
+          const row = document.createElement('label'); row.className='opt';
+          const ip = document.createElement('input'); ip.type='radio'; ip.name='q'+qi; ip.value=i;
+          row.appendChild(ip);
+          const span = document.createElement('div'); span.innerHTML = q.options[i];
+          row.appendChild(span);
+          opts.appendChild(row);
+        });
+
+        const hint = document.createElement('div'); hint.className='hint'; hint.textContent = q.hint || '—';
+        const hintBtn = document.createElement('button'); hintBtn.className='btn small gray'; hintBtn.textContent='Gợi ý';
+        hintBtn.onclick = ()=>{ hint.style.display = hint.style.display==='block'?'none':'block'; };
+
+        card.appendChild(stem); card.appendChild(opts);
+        card.appendChild(hintBtn); card.appendChild(hint);
+        box.appendChild(card);
+
+        // keep mapping answer after shuffling
+        q.__map = optIdx; // map new index -> original index
+      });
+
+      // practicals
+      const pBox = $('#prac'); pBox.innerHTML='';
+      (DATA.practicals||[]).forEach((p, i)=>{
+        const c = document.createElement('div'); c.className='q';
+        c.innerHTML = `<div class="stem">Bài ${i+1+ (DATA.mcqs?.length||0)}: ${p.title}</div>`;
+        if(p.steps && p.steps.length){
+          const ul = document.createElement('ul');
+          p.steps.forEach(s=>{
+            const li=document.createElement('li'); li.textContent=s; ul.appendChild(li);
+          });
+          c.appendChild(ul);
+        }
+        const ta=document.createElement('textarea'); ta.placeholder='Ghi chép kết quả/nguồn/tựa bài...';
+        c.appendChild(ta);
+        pBox.appendChild(c);
+      });
+
+      $('#score').textContent='';
+    }
+
+    function grade(){
+      let correct=0, total = DATA.mcqs.length;
+      $$('#mcqs .q').forEach((node, qi)=>{
+        const picked = node.querySelector('input[type=radio]:checked');
+        const chosen = picked ? Number(picked.value) : -1;
+        const ansOrig = DATA.mcqs[qi].answer;
+        const map = DATA.mcqs[qi].__map || DATA.mcqs[qi].options.map((_,i)=>i);
+        const ansNewIndex = map.indexOf(ansOrig);
+
+        if(chosen===ansNewIndex){
+          correct++;
+          node.classList.add('correct'); node.classList.remove('wrong');
+        }else{
+          node.classList.add('wrong'); node.classList.remove('correct');
+        }
+      });
+      $('#score').textContent = `Điểm trắc nghiệm: ${correct}/${total}`;
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+
+    // controls
+    $('#btnSubmit').onclick = grade;
+    $('#btnResetSame').onclick = ()=>{ SHUFFLED=false; render(); window.scrollTo({top:0,behavior:'smooth'}); };
+    $('#btnResetShuffle').onclick = ()=>{ SHUFFLED=true; render(); window.scrollTo({top:0,behavior:'smooth'}); };
+    $('#btnShowAllHints').onclick = ()=>{
+      const anyHidden = $$('.hint').some(h=>h.style.display!=='block');
+      $$('.hint').forEach(h=>h.style.display = anyHidden ? 'block' : 'none');
+    };
+
+    load();
+  </script>
+</body>
+</html>
 
